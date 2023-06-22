@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Location {
     /// Street address of this business.
-    pub address1: String,
+    pub address1: Option<String>,
 
     /// Street address of this business, continued.
     pub address2: Option<String>,
@@ -13,16 +13,16 @@ pub struct Location {
     pub address3: Option<String>,
 
     /// City of this business.
-    pub city: String,
+    pub city: Option<String>,
 
     /// Zip code of this business.
-    pub zip_code: String,
+    pub zip_code: Option<String>,
 
     /// ISO 3166-1 alpha-2 country code of this business.
-    pub country: String,
+    pub country: Option<String>,
 
     /// ISO 3166-2 (with a few exceptions) state code of this business.
-    pub state: String,
+    pub state: Option<String>,
 
     /// Array of strings that, if organized vertically, give an address that is in the standard address format for the business's country.
     pub display_address: Vec<String>,
